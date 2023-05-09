@@ -1,0 +1,9 @@
+<h1> MY TASKS LETS GOOOOOO</h1>
+<% @tasks.each do |e| %>
+  <h5>
+ <%= link_to e.title, task_path(e), class: 'text-secondary text-decoration-none' %>
+  </h5>
+      <p><%= e.details %></p>
+
+    <% end %>
+<%= link_to "new task", :new_tasks, class: 'text-secondary text-decoration-none'%>
